@@ -37,7 +37,7 @@ public class User implements UserDetails {
 	private boolean locked;
 
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinTable(name = "login_baseid", joinColumns = { @JoinColumn(name = "login_id", referencedColumnName = "ID") }, inverseJoinColumns = { @JoinColumn(name = "base_id", referencedColumnName = "ID") })
+	@JoinTable(name = "login_baseid_demo", joinColumns = { @JoinColumn(name = "login_id", referencedColumnName = "ID") }, inverseJoinColumns = { @JoinColumn(name = "base_id", referencedColumnName = "ID") })
 	private List<BaseID> baseIdSet;
 
 	public User(String login, String password) {
